@@ -1,0 +1,16 @@
+name: YALCST Beta
+
+on:
+  workflow_dispatch
+
+jobs:
+  Sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Sync
+      uses: m4tu4g/YALCST-Beta@main
+      with:
+        github-token: ${{ github.token }}
+        leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
+        leetcode-session: ${{ secrets.LEETCODE_SESSION }}
